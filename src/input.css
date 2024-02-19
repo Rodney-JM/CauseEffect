@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .item{
+        @apply p-5 text-3xl flex justify-between items-center;
+    }
+}

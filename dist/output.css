@@ -544,20 +544,46 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.flex {
+  display: flex;
+}
+
 .h-screen {
   height: 100vh;
 }
 
-.text-center {
-  text-align: center;
+.w-\[100\%\] {
+  width: 100%;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.w-\[30\%\] {
+  width: 30%;
 }
 
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.flex-col {
+  flex-direction: column;
+}
+
+.bg-menu {
+  --tw-bg-opacity: 1;
+  background-color: rgb(43 45 49 / var(--tw-bg-opacity));
+}
+
+.px-\[16px\] {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.text-textColor {
+  --tw-text-opacity: 1;
+  color: rgb(230 230 231 / var(--tw-text-opacity));
 }
