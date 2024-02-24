@@ -1,55 +1,31 @@
 const lists = document.querySelectorAll(".list");
-const arrowsSymbols = document.querySelectorAll(".arrow");
 const subItems = {
-    Race:{
-        0: 'Elf',
-        1: 'Dwarf',
-        2: 'Human'
-    },
-    Classes:{
-        0: 'Warrior',
-        1: 'Mage',
-        2: 'Cleric'
-    },
-    Antecedent:{
-        0: 'Acolyte',
-        1: 'Anthropologist',
-        2: 'Athlete'
-    },
-    Equipament:{
-        0: 'Sword',
-        1: 'Shield',
-        2: 'Armor'
-    },
-    Magias:{
-        0: 'Fireball',
-        1: 'Sacred Flame',
-        2: 'Concert'
-    }
+  Race: ['Elf', 'Dwarf', 'Human'],
+  Classes: ['Warrior', 'Mage', 'Cleric'],
+  Antecedent: ['Acolyte', 'Anthropologist', 'Athlete'],
+  Equipament: ['Sword', 'Shield', 'Armor'],
+  Magias: ['Fireball', 'Sacred Flame', 'Concert']
 }
 
-lists.forEach((list, index, lists)=>{
-    list.addEventListener('click',()=>{
-        for(let i=0;i<3;i++){
-            let newSubItem = document.createElement('li');
-            let text;
-            newSubItem.textContent = text;
-            switch(list){
-                case list=='Race':
-                    text = subItems.Race.i;
-                    break;
-                case list=='Classes':
-                    text = subItems.Classes.i;
-                    break;
-                case list=='Antecedent':
-                    text = subItems.Antecedent.i;
-                    break;
-                case list=='Equipament':
-                    text= subItems.Equipament.i;
-                    break;
-                case list=='Magias':
-                    text= subItems.Magias.i;
-            }
-        } 
-    })
+lists.forEach((list) => {
+  list.addEventListener('click', () => {
+    let listName = list.textContent.trim(); 
+
+    // Se a lista já foi preenchida, é limpado
+    if (list.children.length > 1) {
+      while (list.children.length > 1) {
+        list.removeChild(list.lastChild);
+      }
+      return;
+    }
+
+    if (subItems[listName]) {
+      for (let i = 0; i < 3; i++) {
+        let newSubItem = document.createElement('li');
+        newSubItem.textContent = subItems[listName][i];
+        newSubItem.classList.add("listItem");
+        list.appendChild(newSubItem);
+      }
+    }
+  })
 })
