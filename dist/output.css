@@ -573,6 +573,10 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .bg-menu {
   --tw-bg-opacity: 1;
   background-color: rgb(43 45 49 / var(--tw-bg-opacity));

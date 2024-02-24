@@ -9,6 +9,7 @@ const subItems = {
 
 lists.forEach((list) => {
   list.addEventListener('click', () => {
+    list.classList.toggle(".listOnClick");
     let listName = list.textContent.trim(); 
 
     // Se a lista já foi preenchida, é limpado
@@ -23,9 +24,9 @@ lists.forEach((list) => {
       for (let i = 0; i < 3; i++) {
         let newSubItem = document.createElement('li');
         newSubItem.textContent = subItems[listName][i];
-        newSubItem.classList.add("listItem");
         list.appendChild(newSubItem);
       }
     }
   })
 })
+

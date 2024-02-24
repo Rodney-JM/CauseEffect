@@ -6,7 +6,4 @@
     .item{
         @apply p-5 text-3xl flex justify-between items-center;
     }
-    .listItem{
-        @apply 
-    }
 }
