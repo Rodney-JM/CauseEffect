@@ -4,10 +4,10 @@
 
 @layer components{
     .item{
-        @apply p-5 text-3xl max-w-[100%] w-[100%] cursor-pointer;
+        @apply p-5 text-3xl max-w-[100%] w-[100%] cursor-pointer transition-all hover:bg-menuHover active:bg-menuActive;
     }
     .list li{
-        @apply ml-[45px];
+        @apply ml-[65px] py-2 transition-all hover:text-gray-400;
     }
     .arrow{
         text-align: right;

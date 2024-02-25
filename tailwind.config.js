@@ -5,7 +5,12 @@ module.exports = {
     extend: {
       colors:{
         menu:"#2b2d31",
-        textColor:"#e6e6e7"
+        menuActive:"#26272b",
+        menuHover: "#313338",
+        textColor:"#e6e6e7",
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif']
       }
     },
   },

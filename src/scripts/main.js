@@ -9,7 +9,13 @@ const subItems = {
 
 lists.forEach((list) => {
   list.addEventListener('click', () => {
-    let listName = list.textContent.trim(); 
+    let arrow = list.querySelector('.arrow');
+    if (arrow) {
+      arrow.classList.toggle('bxs-right-arrow');
+      arrow.classList.toggle('bxs-down-arrow');
+    }
+    
+    let listName = list.textContent.trim().split('\n')[0]; 
     list.classList.toggle("active");
     // Se a lista já foi preenchida, é limpado
     if (list.children.length > 1) {
@@ -28,4 +34,3 @@ lists.forEach((list) => {
     }
   })
 })
-
