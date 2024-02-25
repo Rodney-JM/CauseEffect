@@ -4,6 +4,13 @@
 
 @layer components{
     .item{
-        @apply p-5 text-3xl flex justify-between items-center;
+        @apply p-5 text-3xl max-w-[100%] w-[100%] cursor-pointer;
+    }
+    .list li{
+        @apply ml-[45px];
+    }
+    .arrow{
+        text-align: right;
+        width: 100%;
     }
 }

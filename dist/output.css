@@ -545,12 +545,21 @@ video {
 }
 
 .item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  cursor: pointer;
   padding: 1.25rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.list li {
+  margin-left: 45px;
+}
+
+.arrow{
+  text-align: right;
+  width: 100%;
 }
 
 .flex {
@@ -571,10 +580,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .bg-menu {
